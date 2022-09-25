@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 mx-auto">
+
+                <div>
+                    <label for="ProductName">ProductName</label>
+                    <input type="text" id="productName" class="form-control " oninput="validateProductName()">
+
+                    <label for="ProductPrice">ProductPrice</label>
+                    <input type="text" id="productPrice" class="form-control" >
+
+                    <label for="ProductCategory">ProductCategory</label>
+                    <input type="text" id="productCategory" class="form-control">
+
+                    <label for="ProductDesc">ProductDesc</label>
+                    <textarea type="text" id="productDesc" class="form-control"></textarea>
+
+                    <button class="btn btn-info" id="add" onclick="addProduct()">Add Product</button>
+                    <button class="btn btn-info d-none" id="update" onclick="updateProduct()">Update Product</button>
+                    <button class="btn btn-info" id="reset" onclick="clearForm()">Reset</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input oninput="search(this.value)" type="text" class="form-control w-75 mx-auto my-3" placeholder="search by id ..">
+
+
+    <table class="table  table-striped w-75 mx-auto">
+
+        <thead>
+            <th>Index</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Descraption</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </thead>
+
+        <tbody id="myTable">
+                    
+
+        </tbody>
+    </table>
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
